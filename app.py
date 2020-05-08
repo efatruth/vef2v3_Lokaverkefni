@@ -17,8 +17,8 @@ config = {
 
 fb = pyrebase.initialize_app(config)
 db = fb.database()
-#db.child("bill").push({"nr":"abc12","tegund":"Volvo","utegund":"Dumbo","argerd":"2020","akstur":"1500"})
-db.child("user").push({"usr":"johnny","pwd":"bgood"})
+db.child("bill").push({"nr":"abc12","tegund":"Volvo","utegund":"Dumbo","argerd":"2020","akstur":"1500"})
+#db.child("user").push({"usr":"johnny","pwd":"bgood"})
 
 @app.route('/')
 def index():

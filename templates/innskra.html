@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block title %}
+    <title>Gullvagninn</title>
+{% endblock %}
+{% block content %}
+<h2>Bífreðaskrá</h2>
+<p class="sm-scr">Smeltu á bílnúmerið til að breyta eða eyða upplýsingum Bífreðar.</p>
+<table class="favorite">
+    <thead>
+    <tr>
+        <th>Númer</th>
+        <th>Tegund</th>
+        <th>Undirtegund</th>
+        <th>Árgerð</th>
+        <th>Akstur</th>
+    </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td colspan="5">Smeltu á bílnúmerið til að breyta eða eyða upplýsingum Bífreðar.</td>
+        </tr>
+    </tfoot>
+    <tbody>
+    {% for i in bilar %}
+        <tr> <!-- -->>
+            <td data-label="Numer:"> <a href="bill/{{ i[0] }}">{{ i[1]['nr'] }} </a></td>
+            <td data-label="Tegund:"> {{ i[1]['tegund'] }}</td>
+            <td data-label="Undirtegund:"> {{ i[1]['utegund'] }} </td>
+            <td data-label="Árgerð:"> {{ i[1]['argerd'] }} </td>
+            <td data-label="Akstur:"> {{ i[1]['akstur'] }} </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div class="col-2">
+    <p class="center">
+        <a href="/nyskra" class="skraning">Nýskráning bifreiðar</a>
+    </p>
+    <p class="center">
+        <a href="/" class="skraning">Útskráning</a>
+    </p>
+
+</div>
+
+{% endblock %}

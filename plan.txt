@@ -1,0 +1,9 @@
+python  key:value, pör sett í Firebase gagnagrunn  
+
+db.child("bill").push({
+    "nr":"abc12",
+    "tegund":"Volvo",
+    "utegund":"Dumbo",
+    "argerd":"2020",
+    "akstur":"1500",
+})

@@ -1,0 +1,169 @@
+body {
+  max-width: 50em;
+  margin: 1em auto;
+  padding: 0 1em;
+  font-family: 'Public Sans', sans-serif;
+}
+header,footer {
+    border: 1px solid #ccc;
+    border-radius: .5em;
+    background-color: #efefef;
+    padding:1em;
+    text-align: center;
+  }
+  header h1, header h2 {
+  margin: 0;
+  }
+  header h1 {
+    font-size: 2.7em;
+    color: #ffa;
+    padding: 0 1em;
+    text-shadow: -2px 2px #333;
+  }
+/*=================================
+Efnisyfirlit - mobile
+=================================== */
+
+.topmenu {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: rgba(255,255,255, .8);
+  }
+  .topmenu a {
+    display: block;
+    color: rgb(132,0,255);
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 1em;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+
+.topmenu  a:hover,
+.topmenu a:active {
+  color: #ed5565;
+}
+
+.topmenu a.current {
+  color: #ed5565;
+}
+
+/*taflan*/
+.favorite {
+  border-collapse: collapse;
+  margin: 0 0 2em 0;
+  padding: 1em;
+  width: 100%;
+  box-shadow: -5px 5px 5px #afaca8;
+  border-radius: .5em;
+  }
+.favorite caption {
+ font-size: 1.5em;
+ margin: .5em 0 .75em;
+}
+.favorite tr {
+  background: #ededed;
+  border-bottom: 1px solid #bbb;
+  padding: .35em;
+}
+.favorite th,
+.favorite td {
+  padding: .625em;
+ }
+ .favorite th {
+  font-size: .8em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-align: left;
+ }
+ .favorite tfoot {
+  font-size: .8em;
+  text-align: center;
+ }
+ .favorite tbody tr:nth-child(odd) {
+  background: #fefefe;
+ }
+.favorite th:first-child {
+  border-top-left-radius: .5em;
+  text-align: left;
+}
+.favorite th:last-child {
+  border-top-right-radius: .5em;
+}
+.favorite tfoot tr:last-child td:first-child {
+  border-bottom-left-radius: .5em;
+}
+.favorite tfoot tr:last-child td:last-child {
+  border-bottom-right-radius: .5em;
+}
+
+
+
+
+
+/* athugið favorite taflan er stíluð niður "max-width" en ekki upp.
+allt sem er kóðað hér fyrir ofan er fyrir stærri skjái en 60em */
+
+@media screen and (max-width: 60em){
+  .favorite capton {
+    font-size: 1.3em;
+  }
+  .favorite thead {
+    display: none;
+  }
+  .favorite tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625;
+  }
+  .favorite td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  .favorite td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .favorite td:last-child{
+    border-bottom: 0;
+  }
+}
+
+/*=================================
+Register
+=================================== */
+.register form {
+    margin-bottom: 1em;
+  }
+.register legend {
+    font-weight: bold;
+  }
+.register fieldset {
+    border: 1px solid #aaa;
+    border-radius: .5em;
+    padding: 1em;
+    margin: 0 .5em;
+}
+.register label{
+    color: rgb(43, 73, 73);
+    cursor: pointer;
+    font-weight: 400;
+}
+.register input,
+.register select,
+.register textarea {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    color: rgb(43, 73, 73);
+    display: inline; /* block; */
+    margin: .3em 0 1em 0;
+}

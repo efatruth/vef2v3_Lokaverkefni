@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>Gullvagninn</title>
+{% endblock %}
+
+{% block content %}
+<section class="col-2">
+    <div>
+        <h3>Innskráning í bifreiðaskrá</h3>
+        <form action="/innskra" method="POST" class="register">
+            <label>Nafn:
+                <input type="text" name="nafn" required>
+            </label>
+            <label>Lykilorð:
+                <input type="password" name="pass" required>
+            </label>
+            <button type="submit">Innskrá</button>
+        </form>
+        <p>Innskráning - amk. einn notandi með Lykilorð. <br>
+            Getur verið leyst eins og gert er í 5. verkefni.</p>
+    </div>
+    <div>
+        <img src="static/gulljeppi.jpg">
+    </div>
+</section>
+{% endblock %}

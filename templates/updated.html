@@ -1,0 +1,13 @@
+{% extends "sub-layout.html" %}
+
+{% block title %}
+    <title>Bifreið Uppfærð</title>
+{% endblock %}
+
+{% block redir %}
+    <meta http-equiv="refresh"content="2; url={{ url_for('innskra') }}">
+{% endblock %}
+
+{% block content %}
+    <h2>Bifreiðin {{nr}} hefur verið uppfærð í gagnagrunni</h2>
+{% endblock %}

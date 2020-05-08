@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>Gullvagninn</title>
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Bílagagnagrunnurinn Gullvagninn</h1>
+    <p>Í þennan gagnagrunn er hægt að bæta við / breyta / eyða upplýsingum um bílum  </p>
+</header>
+
+<h2>Bífreðaskrá</h2>
+<table class="favorite">
+    <thead>
+        <tr>
+            <th>Númer</th>
+            <th>Tegund</th>
+            <th>Undirtegund</th>
+            <th>Árgerð</th>
+            <th>Akstur</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+
+        </tr>
+    </tfoot>
+    <tbody>
+    {% for i in bilar %}
+        <tr>
+            <td data-label="Numer:"> <a href="bill/{{ i[0] }}">{{ i[1]['nr'] }} </a></td>
+            <td data-label="Tegund:"> {{ i[1]['tegund'] }}</td>
+            <td data-label="Undirtegund:"> {{ i[1]['utegund'] }} </td>
+            <td data-label="Árgerð:"> {{ i[1]['argerd'] }} </td>
+            <td data-label="Akstur:"> {{ i[1]['akstur'] }} </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}
+
